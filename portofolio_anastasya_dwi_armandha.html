@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio - Anastasya Dwi Armandha</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        graytheme: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Styles & Animation */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+        .dark .glass-card {
+            background: rgba(30, 41, 59, 0.85);
+            border: 1px solid rgba(51, 65, 85, 0.8);
+        }
+    </style>
+</head>
+<body class="bg-graytheme-100 text-graytheme-800 font-sans antialiased selection:bg-graytheme-400 selection:text-white transition-colors duration-300">
+
+    <!-- Header Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-graytheme-900/90 backdrop-blur-md text-white shadow-lg">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="#hero" class="text-xl font-bold tracking-wider hover:text-graytheme-300 transition-colors">
+                ANASTASYA<span class="text-graytheme-400">.</span>
+            </a>
+            
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex space-x-8 font-medium text-sm">
+                <a href="#tentang" class="hover:text-graytheme-300 transition-colors">Tentang Saya</a>
+                <a href="#pendidikan" class="hover:text-graytheme-300 transition-colors">Pendidikan</a>
+                <a href="#pengalaman" class="hover:text-graytheme-300 transition-colors">Pengalaman</a>
+                <a href="#keterampilan" class="hover:text-graytheme-300 transition-colors">Keterampilan</a>
+                <a href="#prestasi" class="hover:text-graytheme-300 transition-colors">Prestasi</a>
+                <a href="#kontak" class="hover:text-graytheme-300 transition-colors">Kontak</a>
+            </nav>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="menu-btn" class="md:hidden text-gray-300 hover:text-white focus:outline-none">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-graytheme-800 px-4 pt-2 pb-4 space-y-2 text-sm border-t border-graytheme-700">
+            <a href="#tentang" class="block py-2 hover:text-graytheme-300 transition-colors">Tentang Saya</a>
+            <a href="#pendidikan" class="block py-2 hover:text-graytheme-300 transition-colors">Pendidikan</a>
+            <a href="#pengalaman" class="block py-2 hover:text-graytheme-300 transition-colors">Pengalaman</a>
+            <a href="#keterampilan" class="block py-2 hover:text-graytheme-300 transition-colors">Keterampilan</a>
+            <a href="#prestasi" class="block py-2 hover:text-graytheme-300 transition-colors">Prestasi</a>
+            <a href="#kontak" class="block py-2 hover:text-graytheme-300 transition-colors">Kontak</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="pt-28 pb-16 md:pt-36 md:pb-24 bg-gradient-to-b from-graytheme-900 to-graytheme-800 text-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col-reverse md:flex-row items-center justify-between gap-10">
+                <!-- Text Content -->
+                <div class="w-full md:w-3/5 text-center md:text-left space-y-5">
+                    <div class="inline-block px-3 py-1 bg-graytheme-700 text-graytheme-300 rounded-full text-xs font-semibold tracking-wider uppercase">
+                        Teknik Jaringan & Komputer
+                    </div>
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight">
+                        Anastasya Dwi Armandha
+                    </h1>
+                    <p class="text-graytheme-300 text-base md:text-lg leading-relaxed max-w-2xl">
+                        Lulusan SMK MAARIF NU TIRTO jurusan Teknik Jaringan dan Komputer yang aktif, komunikatif, dan cepat belajar. Memiliki ketertarikan tinggi dibidang komputer dan jaringan khususnya dalam mendesain, membuat jaringan, serta pemasaran produk.
+                    </p>
+                    
+                    <div class="pt-4 flex flex-wrap justify-center md:justify-start gap-4">
+                        <a href="#kontak" class="px-6 py-3 bg-graytheme-200 text-graytheme-900 font-semibold rounded-lg shadow hover:bg-white transition-all transform hover:-translate-y-0.5">
+                            Hubungi Saya
+                        </a>
+                        <a href="#keterampilan" class="px-6 py-3 border border-graytheme-500 text-graytheme-200 font-semibold rounded-lg hover:bg-graytheme-700 transition-all">
+                            Lihat Keahlian
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Avatar Profile Frame -->
+                <div class="w-full md:w-2/5 flex justify-center">
+                    <div class="relative group">
+                        <div class="absolute -inset-1 bg-gradient-to-r from-graytheme-400 to-graytheme-600 rounded-full blur opacity-50 group-hover:opacity-75 transition duration-500"></div>
+                        <div class="relative w-56 h-56 sm:w-64 sm:h-64 rounded-full overflow-hidden border-4 border-graytheme-600 shadow-2xl bg-graytheme-700">
+                            <!-- User Image -->
+                            <img src="Anastasya Dwi Armandha Xll TKJ 1.jpg" alt="Anastasya Dwi Armandha" class="w-full h-full object-cover object-top" onerror="this.onerror=null; this.src='https://placehold.co/400x400/334155/ffffff?text=Anastasya';">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Info Bar -->
+    <div class="bg-graytheme-700 text-graytheme-200 py-4 shadow-md">
+        <div class="max-w-6xl mx-auto px-4 flex flex-wrap justify-around items-center gap-4 text-xs sm:text-sm text-center">
+            <div class="flex items-center gap-2">
+                <i class="fa-solid fa-location-dot text-graytheme-400"></i>
+                <span>Pekalongan, Jawa Tengah</span>
+            </div>
+            <div class="flex items-center gap-2">
+                <i class="fa-solid fa-phone text-graytheme-400"></i>
+                <span>085226493612</span>
+            </div>
+            <div class="flex items-center gap-2">
+                <i class="fa-solid fa-envelope text-graytheme-400"></i>
+                <span>tasyaarmandha@gmail.com</span>
+            </div>
+            <div class="flex items-center gap-2">
+                <i class="fa-brands fa-instagram text-graytheme-400"></i>
+                <span>@tasyaarmandha</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content Grid -->
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-16">
+
+        <!-- Tentag Saya & Education Section -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <!-- Education Card -->
+            <section id="pendidikan" class="glass-card p-6 md:p-8 rounded-2xl shadow-sm border border-graytheme-200 flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="p-3 bg-graytheme-800 text-white rounded-xl">
+                            <i class="fa-solid fa-graduation-cap text-xl"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-graytheme-900">Pendidikan</h2>
+                    </div>
+
+                    <div class="relative pl-6 border-l-2 border-graytheme-300 space-y-4">
+                        <div class="relative">
+                            <!-- Bullet -->
+                            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-graytheme-800 border-4 border-white"></div>
+                            <h3 class="text-lg font-bold text-graytheme-800">SMK MAARIF NU TIRTO</h3>
+                            <p class="text-graytheme-600 font-medium text-sm">Teknik Jaringan dan Komputer</p>
+                            <span class="inline-block mt-2 px-3 py-1 bg-graytheme-200 text-graytheme-700 text-xs rounded-full font-semibold">
+                                Lulus 2027
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-graytheme-200">
+                    <p class="text-xs text-graytheme-500 italic">
+                        *Memiliki motivasi tinggi untuk terus belajar dan berkembang serta memberikan kontribusi positif di lingkungan kerja.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Pengalaman Kerja Card -->
+            <section id="pengalaman" class="glass-card p-6 md:p-8 rounded-2xl shadow-sm border border-graytheme-200">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="p-3 bg-graytheme-800 text-white rounded-xl">
+                        <i class="fa-solid fa-briefcase text-xl"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-graytheme-900">Pengalaman Kerja</h2>
+                </div>
+
+                <div class="mb-4">
+                    <h3 class="font-semibold text-graytheme-700 text-base">Praktik Kerja Lapangan (PKL)</h3>
+                    <p class="text-xs text-graytheme-500">Pengalaman & Operasional Utama</p>
+                </div>
+
+                <ul class="space-y-3">
+                    <li class="flex items-start gap-3 text-sm text-graytheme-700">
+                        <i class="fa-solid fa-check text-graytheme-600 mt-1"></i>
+                        <span>Pengoperasian komputer secara optimal</span>
+                    </li>
+                    <li class="flex items-start gap-3 text-sm text-graytheme-700">
+                        <i class="fa-solid fa-check text-graytheme-600 mt-1"></i>
+                        <span>Membuat dan mengonfigurasi jaringan internet</span>
+                    </li>
+                    <li class="flex items-start gap-3 text-sm text-graytheme-700">
+                        <i class="fa-solid fa-check text-graytheme-600 mt-1"></i>
+                        <span>Membuat dan merancang website sederhana</span>
+                    </li>
+                    <li class="flex items-start gap-3 text-sm text-graytheme-700">
+                        <i class="fa-solid fa-check text-graytheme-600 mt-1"></i>
+                        <span>Pemahaman dan penerapan Akuntansi dasar</span>
+                    </li>
+                </ul>
+            </section>
+
+        </div>
+
+        <!-- Keterampilan Section -->
+        <section id="keterampilan" class="glass-card p-6 md:p-8 rounded-2xl shadow-sm border border-graytheme-200">
+            <div class="flex items-center gap-3 mb-8">
+                <div class="p-3 bg-graytheme-800 text-white rounded-xl">
+                    <i class="fa-solid fa-gears text-xl"></i>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-bold text-graytheme-900">Keterampilan Utama</h2>
+                    <p class="text-xs text-graytheme-500">Kemampuan teknis dan interpersonal</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Skill 1 -->
+                <div class="p-5 rounded-xl bg-white border border-graytheme-200 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-10 h-10 mb-4 rounded-lg bg-graytheme-100 flex items-center justify-center text-graytheme-800">
+                        <i class="fa-solid fa-code text-lg"></i>
+                    </div>
+                    <h3 class="font-bold text-graytheme-800 mb-2">Membuat Website</h3>
+                    <p class="text-xs text-graytheme-600 leading-relaxed">
+                        Dapat membuat tampilan web sederhana yang rapi dan responsif sesuai dengan tema yang diinginkan.
+                    </p>
+                </div>
+
+                <!-- Skill 2 -->
+                <div class="p-5 rounded-xl bg-white border border-graytheme-200 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-10 h-10 mb-4 rounded-lg bg-graytheme-100 flex items-center justify-center text-graytheme-800">
+                        <i class="fa-solid fa-network-wired text-lg"></i>
+                    </div>
+                    <h3 class="font-bold text-graytheme-800 mb-2">Kabel Jaringan</h3>
+                    <p class="text-xs text-graytheme-600 leading-relaxed">
+                        Dapat membuat kabel jaringan internet secara presisi seperti LAN dan Fiber Optik.
+                    </p>
+                </div>
+
+                <!-- Skill 3 -->
+                <div class="p-5 rounded-xl bg-white border border-graytheme-200 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-10 h-10 mb-4 rounded-lg bg-graytheme-100 flex items-center justify-center text-graytheme-800">
+                        <i class="fa-solid fa-lightbulb text-lg"></i>
+                    </div>
+                    <h3 class="font-bold text-graytheme-800 mb-2">Kreatif</h3>
+                    <p class="text-xs text-graytheme-600 leading-relaxed">
+                        Mampu menghasilkan dan mengembangkan ide-ide baru yang inovatif untuk berbagai kebutuhan.
+                    </p>
+                </div>
+
+                <!-- Skill 4 -->
+                <div class="p-5 rounded-xl bg-white border border-graytheme-200 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-10 h-10 mb-4 rounded-lg bg-graytheme-100 flex items-center justify-center text-graytheme-800">
+                        <i class="fa-solid fa-users text-lg"></i>
+                    </div>
+                    <h3 class="font-bold text-graytheme-800 mb-2">Kerjasama Tim</h3>
+                    <p class="text-xs text-graytheme-600 leading-relaxed">
+                        Terbiasa bekerja sama dan berdiskusi aktif dengan tim untuk merumuskan konsep terbaik.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Prestasi & Strategi Marketing Section -->
+        <section id="prestasi" class="glass-card p-6 md:p-8 rounded-2xl shadow-sm border border-graytheme-200">
+            <div class="flex items-center gap-3 mb-8">
+                <div class="p-3 bg-graytheme-800 text-white rounded-xl">
+                    <i class="fa-solid fa-trophy text-xl"></i>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-bold text-graytheme-900">Prestasi & Strategi Marketing</h2>
+                    <p class="text-xs text-graytheme-500">Pencapaian dalam desain visual dan kreatif media</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Achievement Item 1 -->
+                <div class="flex items-start gap-4 p-4 rounded-xl bg-white border border-graytheme-200">
+                    <div class="p-3 bg-graytheme-100 rounded-lg text-graytheme-700 shrink-0">
+                        <i class="fa-solid fa-palette text-lg"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-graytheme-800 text-sm">Desain Poster</h3>
+                        <p class="text-xs text-graytheme-600 mt-1">
+                            Mendesain 10+ poster sekolah yang menarik dan sesuai dengan tema.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Achievement Item 2 -->
+                <div class="flex items-start gap-4 p-4 rounded-xl bg-white border border-graytheme-200">
+                    <div class="p-3 bg-graytheme-100 rounded-lg text-graytheme-700 shrink-0">
+                        <i class="fa-solid fa-pen-nib text-lg"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-graytheme-800 text-sm">Konsep & Caption</h3>
+                        <p class="text-xs text-graytheme-600 mt-1">
+                            Membuat konsep kreatif dan penulisan caption engaging untuk tugas-tugas sekolah.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Achievement Item 3 -->
+                <div class="flex items-start gap-4 p-4 rounded-xl bg-white border border-graytheme-200">
+                    <div class="p-3 bg-graytheme-100 rounded-lg text-graytheme-700 shrink-0">
+                        <i class="fa-solid fa-video text-lg"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-graytheme-800 text-sm">Editing Video & Foto</h3>
+                        <p class="text-xs text-graytheme-600 mt-1">
+                            Mengedit konten video dan foto yang rapi dan estetis menggunakan aplikasi CapCut.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kontak Section -->
+        <section id="kontak" class="bg-graytheme-900 text-white p-8 md:p-12 rounded-2xl shadow-xl">
+            <div class="max-w-4xl mx-auto text-center space-y-6">
+                <h2 class="text-3xl font-bold">Mari Bekerja Sama!</h2>
+                <p class="text-graytheme-300 text-sm md:text-base max-w-xl mx-auto">
+                    Saya selalu terbuka untuk berdiskusi, belajar hal baru, dan memberikan kontribusi terbaik untuk tim Anda.
+                </p>
+
+                <div class="pt-6 grid grid-cols-1 sm:grid-cols-3 gap-6 text-left">
+                    <!-- WhatsApp/Phone -->
+                    <a href="https://wa.me/6285226493612" target="_blank" class="p-4 bg-graytheme-800 rounded-xl hover:bg-graytheme-700 transition-colors flex items-center gap-4">
+                        <div class="p-3 bg-graytheme-700 text-graytheme-300 rounded-lg">
+                            <i class="fa-solid fa-phone text-lg"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-graytheme-400">Telepon / WA</p>
+                            <p class="text-sm font-semibold">085226493612</p>
+                        </div>
+                    </a>
+
+                    <!-- Email -->
+                    <button onclick="copyToClipboard('tasyaarmandha@gmail.com')" class="p-4 bg-graytheme-800 rounded-xl hover:bg-graytheme-700 transition-colors flex items-center gap-4 text-left w-full">
+                        <div class="p-3 bg-graytheme-700 text-graytheme-300 rounded-lg">
+                            <i class="fa-solid fa-envelope text-lg"></i>
+                        </div>
+                        <div class="truncate">
+                            <p class="text-xs text-graytheme-400">Email (Klik Copy)</p>
+                            <p class="text-sm font-semibold truncate">tasyaarmandha@gmail.com</p>
+                        </div>
+                    </button>
+
+                    <!-- Instagram -->
+                    <a href="https://instagram.com/tasyaarmandha" target="_blank" class="p-4 bg-graytheme-800 rounded-xl hover:bg-graytheme-700 transition-colors flex items-center gap-4">
+                        <div class="p-3 bg-graytheme-700 text-graytheme-300 rounded-lg">
+                            <i class="fa-brands fa-instagram text-lg"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-graytheme-400">Instagram</p>
+                            <p class="text-sm font-semibold">@tasyaarmandha</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="fixed bottom-5 right-5 bg-graytheme-800 text-white px-4 py-3 rounded-lg shadow-xl text-sm hidden transition-all duration-300 z-50 flex items-center gap-2">
+        <i class="fa-solid fa-circle-check text-green-400"></i>
+        <span id="toast-message">Email berhasil disalin!</span>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-graytheme-900 text-graytheme-400 py-6 border-t border-graytheme-800 text-center text-xs">
+        <div class="max-w-6xl mx-auto px-4">
+            <p>&copy; 2026 Anastasya Dwi Armandha. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Toggle Mobile Menu
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on click link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Copy Email function with execCommand for compatibility
+        function copyToClipboard(text) {
+            const tempInput = document.createElement("input");
+            tempInput.value = text;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+
+            showToast("Email berhasil disalin ke clipboard!");
+        }
+
+        // Show Toast Notification
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const toastMessage = document.getElementById('toast-message');
+            toastMessage.textContent = message;
+            
+            toast.classList.remove('hidden');
+            setTimeout(() => {
+                toast.classList.add('hidden');
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
