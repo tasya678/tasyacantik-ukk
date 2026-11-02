@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="id" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
@@ -115,7 +114,7 @@
                     <div class="relative group">
                         <div class="absolute -inset-1 bg-gradient-to-r from-graytheme-400 to-graytheme-600 rounded-full blur opacity-50 group-hover:opacity-75 transition duration-500"></div>
                         <div class="relative w-56 h-56 sm:w-64 sm:h-64 rounded-full overflow-hidden border-4 border-graytheme-600 shadow-2xl bg-graytheme-700">
-                            <!-- User Image -->
+                            <!-- foto.jpg-->
                             <img src="Anastasya Dwi Armandha Xll TKJ 1.jpg" alt="Anastasya Dwi Armandha" class="w-full h-full object-cover object-top" onerror="this.onerror=null; this.src='https://placehold.co/400x400/334155/ffffff?text=Anastasya';">
                         </div>
                     </div>
